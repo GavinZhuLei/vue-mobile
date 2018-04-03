@@ -27,7 +27,7 @@ Object.keys(entryObj).forEach(item => {
   console.log(item)
   configPlugins.push(new HtmlWebpackPlugin(
     {
-      filename: '../dist/' + item + '/index.html',
+      filename: '../dist/' + item + '.html',
       template: path.resolve(__dirname, '../index.html'),
       chunks: [item]
     }
