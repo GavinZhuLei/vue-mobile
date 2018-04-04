@@ -4,15 +4,11 @@ const path = require('path')
 
 let moduleName = readlineSync.question('your module name: ')
 
-console.log('your module name is ' + moduleName)
-
-console.error(fs.existsSync(path.resolve(__dirname, '../src/modules', moduleName)))
-
 const modulePath = path.resolve(__dirname, '../src/modules', moduleName)
 const templatePath = path.resolve(__dirname, '../template')
 
 if (fs.existsSync(modulePath)) {
-  console.error(`${moduleName} module exists`)
+  console.error(`${moduleName} module is exists`)
   process.exit()
 }
 
@@ -39,3 +35,5 @@ const copy = (source) => {
 }
 
 copy(sourceFile)
+
+console.log('success!')
