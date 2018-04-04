@@ -31,7 +31,7 @@
 |   |   |   --- App.vue                   ---根组件
 |   |   |   --- main.js                   ---模块入口文件
 +-- template/             ---模块模板文件目录
---- index.html           ---html模板文件
+--- index.html            ---html模板文件
 ```
 
 ## 安装运行
