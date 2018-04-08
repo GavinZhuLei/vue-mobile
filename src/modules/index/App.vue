@@ -5,11 +5,13 @@
 </template>
 
 <script>
+
 export default {
   name: 'App'
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../../style/base/aspect-ratio.scss'
 
 </style>
