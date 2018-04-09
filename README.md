@@ -9,7 +9,7 @@
 - 统一解决移动端点击延迟
 - sass支持
 - 自动添加浏览器前缀：autoprefixer
-- 使用vw实现移动端适配 [查看文档](doc/vm.md)
+- 使用vw实现移动端适配： [查看文档](https://github.com/GavinZhuLei/vue-mobile/blob/v1.1/doc/vw.md)
 - 处理移动端1px的解决方案
 - 处理元素容器宽高比
 
