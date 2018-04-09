@@ -101,7 +101,7 @@ Object.keys(entryObj).forEach(item => {
       // see https://github.com/ampedandwired/html-webpack-plugin
       filename: '../dist/' + item + '.html',
       template: path.resolve(__dirname, '../index.html'),
-      chunks: [item],
+      chunks: ['manifest', 'vendor', item],
       inject: true,
       minify: {
         removeComments: true,
