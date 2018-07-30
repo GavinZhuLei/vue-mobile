@@ -1,0 +1,41 @@
+.cell-group {
+  .group-title {
+    color: rgb(127, 127, 127);
+    height: 24px;
+    font-size: 11px;
+    line-height: 24px;
+    padding-left: 15px;
+  }
+
+  .mint-cell {
+    min-height: 40px;
+
+    .mint-cell-wrapper {
+      padding: 0 15px;
+    }
+
+    .mint-cell-title {
+      font-size: 12px;
+    }
+
+    .mint-cell-value {
+      font-size: 12px;
+    }
+  }
+
+  .mint-cell:last-child {
+    background-size: 0;
+  }
+
+  .mint-cell:first-of-type .mint-cell-wrapper {
+    background-size: 0;
+  }
+}
+
+.cube-radio-label {
+  font-size: 12px;
+}
+
+.cell-group.no-title{
+  margin-top: 16px;
+}

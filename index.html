@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <title>vue-app</title>
-    <script>
-      // 解决部分安卓手机不支持 Promise
-      if (!window.Promise) {
-        document.writeln('<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"'+'>'+'<'+'/'+'script>')
-      }
-    </script>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>智慧机电</title>
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=f18359ee19b8e3bb95ac9573c83e5959&plugin=AMap.Geocoder"></script>
+  <!-- <script src="//cdn.bootcss.com/eruda/1.4.2/eruda.min.js"></script>
+  <script>eruda.init();</script> -->
+  <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
+
+  <script>
+    // window.vConsole = new window.VConsole()
+  </script>
+
+  <script src="http://g.alicdn.com/dingding/open-develop/1.9.0/dingtalk.js"></script>
+  <script>
+    // 解决部分安卓手机不支持 Promise
+    if (!window.Promise) {
+      document.writeln('<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"'+'>'+'<'+'/'+'script>')
+    }
+  </script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
