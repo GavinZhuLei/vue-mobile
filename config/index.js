@@ -13,8 +13,6 @@ module.exports = {
 
       '/test_api': {
           target: 'http://172.16.109.53:8069',
-          // target: 'http://crax.ngrok.codercrax.com',
-          // target: 'http://xian.jd.funenc.com',
           changeOrigin: true,
           pathRewrite: {
             '^/test_api': '/'
@@ -60,10 +58,10 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../../static/v2/index.html'),
+    index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../../static/v2'),
+    assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
 

@@ -73,7 +73,6 @@ module.exports = {
           resolve('src'),
           resolve('node_modules/webpack-dev-server'),
           resolve('node_modules/mand-mobile'),
-          resolve('node_modules/element-ui'),
           resolve('node_modules/vux'),
           resolve('node_modules/babel-polyfill/dist/polyfill.js'),
           resolve('node_modules/vue-awesome')
