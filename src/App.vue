@@ -16,7 +16,7 @@ export default {
     console.log('route', this.$route)
     this.toast = this.$createToast({
       time: 0,
-      txt: '加载中，请稍后...'
+      txt: '身份认证中...'
     })
 
     !this.$route.name && this.toast.show()
@@ -24,7 +24,7 @@ export default {
   watch: {
     '$route.name': function (val) {
       console.log('change route', val)
-      this.toast.hide()
+      // this.toast.hide()
     }
   }
 }

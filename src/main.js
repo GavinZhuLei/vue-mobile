@@ -8,6 +8,7 @@ import Vue from 'vue'
 
 import App from './App'
 import router from './router'
+import store from './store'
 import FastClick from 'fastclick'
 import 'normalize.css/normalize.css'
 import rpc from './service/rpc'
@@ -85,6 +86,7 @@ router.afterEach((to, from) => {
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
