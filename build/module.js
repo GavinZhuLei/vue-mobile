@@ -13,16 +13,16 @@ if (fs.existsSync(modulePath)) {
 }
 
 fs.mkdirSync(modulePath)
-fs.mkdirSync(path.join(modulePath, 'router'))
-fs.mkdirSync(path.join(modulePath, 'views'))
-fs.mkdirSync(path.join(modulePath, 'views/home'))
+// fs.mkdirSync(path.join(modulePath, 'router'))
+// fs.mkdirSync(path.join(modulePath, 'views'))
+// fs.mkdirSync(path.join(modulePath, 'views/home'))
 
 // 复制模板中的文件到目标文件夹
 const sourceFile = [
   'main.js',
   'App.vue',
-  'router/index.js',
-  'views/home/Index.vue'
+  // 'router/index.js',
+  // 'views/home/Index.vue'
 ]
 const copy = (source) => {
   for (let sitem of source) {

@@ -1,6 +1,6 @@
 # vue-mobile
 
-> 基于vue-cli扩展的用于移动端web开发的通用脚手架
+> 基于vue-cli扩展的用于native开发的通用脚手架，采用APICloud打包应用，打包目录是dist目录
 
 ## 特性
 
@@ -29,12 +29,14 @@
 |   +-- components/            ---公用组件
 |   +-- modules/               ---项目模块目录
 |   |   +-- moudule1                ---项目模块，对应一个入口，可以通过命令自动创建
-|   |   |   +-- router/                   ---路由配置
-|   |   |   +-- views/                    ---视图目录
 |   |   |   --- App.vue                   ---根组件
 |   |   |   --- main.js                   ---模块入口文件
 +-- template/             ---模块模板文件目录
 --- index.html            ---html模板文件
++-- static/
+|   --- config.xml      --- APICloud打包配置文件
+|   +-- script/        --- 本地js文件
+|   +-- style/        ---本地样式文件
 ```
 
 ## 安装运行
@@ -43,10 +45,7 @@
 # 安装依赖
 npm install
 
-# 使用热加载模式访问（开发环境）
-npm run dev
-
-# 生产环境打包压缩（生产环境）
+# 生产环境打包压缩
 npm run build
 
 # 创建模块，自动在src/modules/下生成模板代码和入口文件

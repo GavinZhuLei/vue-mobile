@@ -12,8 +12,8 @@ module.exports = {
     },
     "postcss-cssnext": {}, // 具有autoprefixer
     "postcss-px-to-viewport": {
-      viewportWidth: 750,
-      viewportHeight: 1334,
+      viewportWidth: 375,
+      viewportHeight: 667,
       unitPrecision: 3, //指定`px`转换为视窗单位值的小数位数
       viewportUnit: 'vw',
       selectorBlackList: ['.ignore', '.hairlines'], // 指定不转换为视窗单位的类，可以无限添加
