@@ -2,12 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import { Header, Button } from 'mint-ui'
 import Icon from 'vue-awesome/components/Icon'
 
-Vue.config.productionTip = false
-
-import 'vue-awesome/icons/regular/plus-square'
+import { Header, Button } from 'mint-ui'
 
 import FastClick from 'fastclick'
 
@@ -18,11 +15,13 @@ FastClick.prototype.focus = function (targetElement) {
 
 FastClick.attach(document.body)
 
-Vue.component('icon', Icon)
-
-
 Vue.component(Header.name, Header)
 Vue.component(Button.name, Button)
+
+Vue.config.productionTip = false
+
+Vue.component('icon', Icon)
+
 
 /* eslint-disable no-new */
 new Vue({

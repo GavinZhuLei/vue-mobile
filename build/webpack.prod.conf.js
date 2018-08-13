@@ -5,6 +5,7 @@ const webpack = require('webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
+const vuxLoader = require('vux-loader')
 
 const pluginArray = require('./plugins.prod')
 
@@ -48,4 +49,6 @@ if (config.build.bundleAnalyzerReport) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin())
 }
 
-module.exports = webpackConfig
+module.exports = vuxLoader.merge(webpackConfig, {
+  plugins: ['vux-ui']
+})

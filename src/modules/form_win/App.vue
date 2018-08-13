@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <mt-header id="header" title="标题过长会隐藏后面的内容啊哈哈哈哈">
-      <icon name="regular/plus-square" slot="right" class="header-icon"></icon>
+    <mt-header id="header" title="表单">
+      <mt-button icon="back" @click.native="handleBack"  slot="left">返回</mt-button>
     </mt-header>
 
     <div id="main">
@@ -15,7 +15,7 @@ export default {
   name: 'App',
   mounted () {
     window.apiready = function () {
-      var header = $api.byId('header')
+      const header = $api.byId('header')
       $api.fixStatusBar(header)
 
       var headerPos = $api.offset(header);
@@ -23,7 +23,7 @@ export default {
       var mainPos = $api.offset(main);
       api.openFrame({
         name: 'home',
-        url: 'home.html',
+        url: 'form_frame.html',
         bounces: true,
         rect: {
             x: 0,
@@ -33,12 +33,27 @@ export default {
         }
       });
     }
+
+  },
+  methods: {
+    handleBack () {
+      api.closeWin()
+    }
   }
 }
 </script>
 
 <style lang="scss">
 @import '../../style/base/aspect-ratio.scss';
+
+#header{
+  height: 60px;
+  font-size: 16px;
+
+  .header-icon{
+    font-size: 20px;
+  }
+}
 
 html,body{
     height: 100%;
@@ -66,14 +81,5 @@ html,body{
   max-width: 100%;
   max-height: 100%;
   vertical-align: middle;
-}
-
-#header{
-  height: 60px;
-  font-size: 16px;
-
-  .header-icon{
-    font-size: 20px;
-  }
 }
 </style>
