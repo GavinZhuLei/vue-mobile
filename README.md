@@ -1,6 +1,6 @@
 # vue-mobile
 
-> 基于vue-cli扩展的用于native开发的通用脚手架，采用APICloud打包应用，打包目录是dist目录
+> 用于native开发的通用脚手架，采用APICloud打包应用，APICloud打包目录是dist目录
 
 ## 特性
 
