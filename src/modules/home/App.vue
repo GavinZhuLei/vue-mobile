@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <group>
-      <cell title="跳转" is-link @click.native="handleTest"></cell>
       <cell title="编辑表单" is-link @click.native="handleForm"></cell>
       <cell title="组件" is-link @click.native="handleComponent"></cell>
       <cell title="浏览器" is-link @click.native="handleBrower"></cell>

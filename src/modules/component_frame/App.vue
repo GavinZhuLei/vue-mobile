@@ -20,9 +20,8 @@
       <cell title="popup-picker" is-link @click.native="handleComponet('popuppicker')"></cell>
       <cell title="popup-radio" is-link @click.native="handleComponet('popupradio')"></cell>
       <cell title="swipeout" is-link @click.native="handleComponet('swipeout')"></cell>
-      <cell title="search" is-link></cell>
-      <cell title="x-switch" is-link></cell>
-      <cell title="x-input" is-link></cell>
+      <cell title="x-switch" is-link @click.native="handleComponet('switch')"></cell>
+      <cell title="x-input" is-link @click.native="handleComponet('input')"></cell>
       <cell title="x-number" is-link></cell>
       <cell title="x-textarea" is-link></cell>
       <cell title="x-address" is-link></cell>

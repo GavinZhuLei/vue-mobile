@@ -1,79 +1,75 @@
 <template>
-  <div id="app">
-    <mt-header id="header" title="标题过长会隐藏后面的内容啊哈哈哈哈">
-      <icon name="regular/plus-square" slot="right" class="header-icon"></icon>
-    </mt-header>
-
-    <div id="main">
-
-    </div>
-  </div>
+  <win @open-frame="onOpenFrame">
+    <x-header id="header" slot="header" :left-options="{showBack: false}" >vue-mobile
+      <a slot="right" @click="handleScan">
+        <x-icon type="qr-scanner" size="20"></x-icon>
+      </a>
+    </x-header>
+  </win>
 </template>
 
 <script>
+import Win from '../../components/Win.vue'
+import { XHeader } from 'vux'
+
 export default {
   name: 'App',
-  mounted () {
-    window.apiready = function () {
-      var header = $api.byId('header')
-      $api.fixStatusBar(header)
-
-      var headerPos = $api.offset(header);
-      var main = $api.byId('main');
-      var mainPos = $api.offset(main);
+  components: {
+    Win,
+    XHeader
+  },
+  data () {
+    return {
+      FNScanner: null
+    }
+  },
+  methods: {
+    onOpenFrame (header, main) {
+      this.FNScanner = api.require('FNScanner')
       api.openFrame({
         name: 'home',
         url: 'home.html',
         bounces: true,
         rect: {
             x: 0,
-            y: headerPos.h,
+            y: header.h,
             w: 'auto',
-            h: mainPos.h
+            h: main.h
         }
-      });
+      })
+    },
+
+    handleScan () {
+      console.log('scan')
+      
+      this.FNScanner.open({
+        autorotation: true
+      }, function(ret, err) {
+        if (ret) {
+          // alert(JSON.stringify(ret));
+          if (ret.eventType === 'success') {
+            api.openWin({
+              name: 'browser',
+              url: 'browser_win.html',
+              pageParam: {
+                url: ret.content
+              }
+            })
+          }
+        } else {
+          alert(JSON.stringify(err));
+        }
+      })
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import '../../style/base/aspect-ratio.scss';
-
-html,body{
-    height: 100%;
+.vux-x-icon {
+  fill: #fff;
 }
-#app{
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-flex-flow: column;
-            flex-flow: column;
-}
-
-#main{
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-}
-
-.fa-icon{
-  width: auto;
-  height: 1em; /* 或任意其它字体大小相对值 */
-  /* 要在 Safari 中正常工作，需要再引入如下两行代码 */
-  max-width: 100%;
-  max-height: 100%;
-  vertical-align: middle;
-}
-
-#header{
-  height: 60px;
-  font-size: 16px;
-
-  .header-icon{
-    font-size: 20px;
-  }
+.vux-header-right{
+  bottom: 7px !important;
 }
 </style>

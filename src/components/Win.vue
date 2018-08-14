@@ -34,6 +34,12 @@ export default {
     top: auto;
     bottom: 11px;
   }
+
+  .vux-header-right{
+    // vertical-align: middle;
+    top: auto;
+    bottom: 11px;
+  }
 }
 
 html,body{

@@ -20,7 +20,7 @@ module.exports = {
       minPixelValue: 1,
       mediaQuery: false, // 允许在媒体查询中转换`px`
     },
-    "postcss-viewport-units": {},
+    // "postcss-viewport-units": {},
     "cssnano": {
       preset: "advanced",
       autoprefixer: false, //与cssnext autoprefixer重复

@@ -4,11 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import Icon from 'vue-awesome/components/Icon'
 
-Vue.config.productionTip = false
-
-import 'vue-awesome/icons/regular/plus-square'
-
 import FastClick from 'fastclick'
+
+import  { LoadingPlugin } from 'vux'
+Vue.use(LoadingPlugin)
 
 FastClick.prototype.focus = function (targetElement) {
   'use strict'
@@ -17,7 +16,10 @@ FastClick.prototype.focus = function (targetElement) {
 
 FastClick.attach(document.body)
 
+Vue.config.productionTip = false
+
 Vue.component('icon', Icon)
+
 
 /* eslint-disable no-new */
 new Vue({

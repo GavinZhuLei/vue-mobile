@@ -1,15 +1,14 @@
 <template>
   <win @open-frame="onOpenFrame">
-    <x-header id="header" slot="header" :left-options="{preventGoBack: true}" @on-click-back="handleClose">表单</x-header>
+    <x-header id="header" slot="header" :left-options="{preventGoBack: true}" @on-click-back="handleClose">XSwitch</x-header>
   </win>
 </template>
 
 <script>
-import Win from '../../components/Win.vue'
+import Win from '../../components/Win'
 import { XHeader } from 'vux'
 
 export default {
-  name: 'App',
   components: {
     Win,
     XHeader
@@ -21,9 +20,10 @@ export default {
 
     onOpenFrame (header, main) {
       api.openFrame({
-        name: 'home',
-        url: 'form_frame.html',
+        name: 'switch_frame',
+        url: 'switch_frame.html',
         bounces: true,
+        vScrollBarEnabled: true,
         rect: {
             x: 0,
             y: header.h,
