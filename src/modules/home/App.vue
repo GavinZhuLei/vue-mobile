@@ -4,6 +4,7 @@
       <cell title="跳转" is-link @click.native="handleTest"></cell>
       <cell title="编辑表单" is-link @click.native="handleForm"></cell>
       <cell title="组件" is-link @click.native="handleComponent"></cell>
+      <cell title="浏览器" is-link @click.native="handleBrower"></cell>
     </group>
   </div>
 </template>
@@ -43,6 +44,47 @@ export default {
         name: 'component',
         url: 'component_win.html'
       })
+    },
+
+    handleBrower () {
+      api.openWin({
+        name: 'browser',
+        url: 'browser_win.html',
+        pageParam: {
+          url: 'http://www.baidu.com'
+        }
+      })
+
+      // const browser = api.require('webBrowser')
+
+      // browser.open({
+      //   url: 'http://www.baidu.com'
+      // })
+
+      // browser.openView({
+      //   url: 'http://www.baidu.com',
+      //   rect: {
+      //     x: 0,
+      //     y: 64,
+      //     w: 'auto',
+      //     h: 'auto'
+      //   }
+      // }, function(ret, err) {
+      //   switch (ret.state) {
+      //     case 0:
+      //       break;
+      //     case 1:
+      //       break;
+      //     case 2:
+      //       break;
+      //     case 3:
+      //       break;
+      //     case 4:
+      //       break;
+      //     default:
+      //       break;
+      //   }
+      // })
     }
   }
 }

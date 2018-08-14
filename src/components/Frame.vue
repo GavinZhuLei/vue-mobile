@@ -6,7 +6,12 @@
 
 <script>
 export default {
+  mounted () {
+    window.apiready = () => {
 
+      this.$emit('on-ready')
+    }
+  }
 }
 </script>
 

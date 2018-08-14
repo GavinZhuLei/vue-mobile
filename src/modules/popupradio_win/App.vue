@@ -1,6 +1,6 @@
 <template>
   <win @open-frame="onOpenFrame">
-    <x-header id="header" slot="header" :left-options="{preventGoBack: true}" @on-click-back="handleClose">组件库</x-header>
+    <x-header id="header" slot="header" :left-options="{preventGoBack: true}" @on-click-back="handleClose">PopupRadio</x-header>
   </win>
 </template>
 
@@ -20,8 +20,8 @@ export default {
 
     onOpenFrame (header, main) {
       api.openFrame({
-        name: 'component',
-        url: 'component_frame.html',
+        name: 'popupradio_frame',
+        url: 'popupradio_frame.html',
         bounces: true,
         vScrollBarEnabled: true,
         rect: {
@@ -29,12 +29,6 @@ export default {
             y: header.h,
             w: 'auto',
             h: main.h
-        },
-        pageParam: {
-          x: 0,
-          y: header.h,
-          w: 'auto',
-          h: main.h
         }
       })
     }
@@ -43,5 +37,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>
