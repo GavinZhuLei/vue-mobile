@@ -39,10 +39,11 @@
 ```
 
 ## 准备开始
-
 1. 在APICloud官网创建应用并且配置应用，（此处不对如何使用APICloud过多讲解，具体操作请到APICloud官网查看），可下载 APICloud Studio 2 实现手机上实施查看效果
 2. 源码中提供了一个简单的例子，创建应用需要配置几个模块如下图：
-  ![](https://github.com/GavinZhuLei/vue-mobile/blob/native/images/1.png)
+
+	![](https://github.com/GavinZhuLei/vue-mobile/blob/native/images/1.png)
+
 
 ## 安装运行
 
@@ -50,7 +51,7 @@
 # 安装依赖
 npm install
 
-# 生产环境打包压缩
+# 生产环境打包压缩，生成dist/目录用于APICloud打包成app
 npm run build
 
 # 创建模块，自动在src/modules/下生成模板代码和入口文件
