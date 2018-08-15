@@ -1,17 +1,15 @@
 # vue-mobile
 
-> 用于native开发的通用脚手架，采用APICloud打包应用，APICloud打包目录是dist目录
+> 采用vue实现快速native应用开发，采用APICloud打包应用，实现一套代码多端运行
+> 项目引入vux组件库可以使开发效率更加快
 
 ## 特性
 
-- 多入口打包：实现项目中遇到单页和多页同时存在的情况
-- 通过命令快速生成模块代码：统一模块代码规范，一个module对应一个入口，不用在webpack单独配置入口
-- 统一解决移动端点击延迟
+- 通过命令快速生成模块代码：避免繁琐的新建window, frame 布局页面，编写重复的代码（此处参考APICloud开发文档实现最佳体验）
 - sass支持
 - 自动添加浏览器前缀：autoprefixer
 - 使用vw实现移动端适配： [查看文档](https://github.com/GavinZhuLei/vue-mobile/blob/v1.1/doc/vw.md)
-- 处理移动端1px的解决方案
-- 处理元素容器宽高比
+- 处理移动端1px的解决方案（参考vux组件库文档）
 
 ## 代码目录
 
@@ -34,10 +32,17 @@
 +-- template/             ---模块模板文件目录
 --- index.html            ---html模板文件
 +-- static/
-|   --- config.xml      --- APICloud打包配置文件
+|   --- config.xml      --- APICloud打包配置文件，配置具体参考APICloud开发文档
 |   +-- script/        --- 本地js文件
 |   +-- style/        ---本地样式文件
++-- dist/         --- vue项目打包目录，同时也是APICloud打包目录（通过npm run build自动生成）
 ```
+
+## 准备开始
+
+1. 在APICloud官网创建应用并且配置应用，（此处不对如何使用APICloud过多讲解，具体操作请到APICloud官网查看），可下载 APICloud Studio 2 实现手机上实施查看效果
+2. 源码中提供了一个简单的例子，创建应用需要配置几个模块如下图：
+  ![](https://github.com/GavinZhuLei/vue-mobile/blob/native/images/1.png)
 
 ## 安装运行
 
