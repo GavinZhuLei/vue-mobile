@@ -7,6 +7,7 @@
     <group title="布局">
       <cell title="flexbox" is-link @click.native="handleComponet('flexbox')"></cell>
       <cell title="grid" is-link @click.native="handleComponet('grid')"></cell>
+      <cell title="popup" is-link @click.native="handleComponet('popup')"></cell>
       <!-- <cell title="sticky" is-link @click.native="handleComponet('sticky')"></cell> -->
       <!-- <cell title="view-box" is-link></cell> -->
 
@@ -22,9 +23,6 @@
       <cell title="swipeout" is-link @click.native="handleComponet('swipeout')"></cell>
       <cell title="x-switch" is-link @click.native="handleComponet('switch')"></cell>
       <cell title="x-input" is-link @click.native="handleComponet('input')"></cell>
-      <cell title="x-number" is-link></cell>
-      <cell title="x-textarea" is-link></cell>
-      <cell title="x-address" is-link></cell>
     </group>
   </vm-frame>
 </template>
