@@ -1,18 +1,18 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
+import Cookies from 'js-cookie'
+import App from './App.vue';
+import Bootstrap from '../../utils/bootstrap'
 import router from './router'
+import store from './store'
 
-const FastClick = require('fastclick')
-FastClick.attach(document.body)
+router.beforeEach((to, from, next) => {
+  // if (to.name !== 'login') {
+  //   const token = Cookies.get('token')
+  //   if (!token) {
+  //     next('/login')
+  //   }
 
-Vue.config.productionTip = false
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+  // }
+  next()
 })
+
+Bootstrap.init(App, router, store)
