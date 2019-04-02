@@ -11,6 +11,10 @@
             :pullUpLoad="pullUpLoadObj"
             @pullingUp="onPullingUp"
             :scrollbar="scrollbarObj"
+            @scroll="onScroll"
+            @scroll-end="onScrollEnd"
+            listenScroll
+            listenScrollEnd
           >
 
               <slot></slot>
@@ -135,6 +139,20 @@ export default {
       this.$refs.scroller.scrollTop()
       this.$refs.scroller.openPullUp()
       this.canLoad = true
+    },
+    onScroll (pos) {
+      this.$emit('on-scroll', pos)
+    },
+    onScrollEnd (pos) {
+    },
+    getScrollPosition () {
+      return this.$refs.scroller.getPosition()
+    },
+    disable() {
+      this.$refs.scroller.disable()
+    },
+    enable() {
+      this.$refs.scroller.enable()
     },
   },
 }

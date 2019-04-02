@@ -10,7 +10,8 @@
     <van-nav-bar slot="header" class="header" title="xxxxx">
     </van-nav-bar>
 
-
+    <div>{{$t('common.title')}}</div>
+    <button @click="handleClick">home跳转</button>
   </page>
 </template>
 
@@ -38,6 +39,9 @@ export default {
     onReady(header) {
       this.headerHeightVW = (header.h) * 100 / header.w
     },
+    handleClick () {
+      this.$router.push('/second')
+    }
   }
 }
 </script>

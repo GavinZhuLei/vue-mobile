@@ -1,16 +1,16 @@
 
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import zhHK from './zh-HK'
+import zhCN from './zh-CN'
 import enUS from './en-US'
 
 Vue.use(VueI18n)
 
 export default new VueI18n({
-  locale: 'en-US',
+  locale: 'zh-HK',
   fallbackLocale: 'zh-HK',
   messages: {
-    'zh-HK': zhHK,
-    'en-US': enUS,
+    'zh-CN': zhCN,
+    'en-US': enUS
   },
 })

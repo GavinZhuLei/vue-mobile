@@ -1,5 +1,5 @@
 export default {
   common: {
-    title: 'title'
+    title: '标题'
   }
 }

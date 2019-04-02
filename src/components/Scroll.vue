@@ -260,6 +260,12 @@ export default {
     openPullUp(option) {
       this.scroll.openPullUp(option)
     },
+    getPosition () {
+      return {
+        x: this.scroll.x,
+        y: this.scroll.y
+      }
+    },
     _initPullDownRefresh() {
       this.scroll.on('pullingDown', () => {
         this.beforePullDown = false
